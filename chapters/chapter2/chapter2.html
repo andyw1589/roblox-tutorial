@@ -26,7 +26,7 @@
         <p>
             This chapter will introduce the basic types of data there are, and how to represent them in Lua and Luau.<br>
 
-            The basic types of data are numbers, characters, strings, and booleans.<br>
+            The basic types of data are numbers, characters, strings, and Booleans.<br>
 
             <h2>Numbers</h2>
             Numbers can be divided into two types: integers and floats. Integers are basically the "whole numbers" that you've learned
@@ -44,11 +44,62 @@
             <h3 class="quickexercise">Quick Exercise: Classify the following values: 1, '1', "One"</h3>
 
             <h2>Booleans</h2>
+            Booleans might sound weird if you've never heard them before, but they're basically just <em>true</em> or <em>false</em> (note: they are NOT the literal strings "true" and "false").
+            For example, the statement "1 + 1 = 2" is a <em>true</em> statement, but "1 + 2 = 6" is <em>false</em>. These are Booleans (fun fact: they are named after
+            <a href="https://en.wikipedia.org/wiki/George_Boole" target="_blank">George Boole.</a>).
+
+            <h3 class="quickexercise">Quick Exercise: Classify the following values statements as either true or false:</h3>
+            <ul>
+                <li>The Earth is in space.</li>
+                <li>2 + 2 = 5</li>
+                <li>Luau is used to program ROBLOX games.</li>
+                <li>The Olympics are held every four years.</li>
+                <li>The moon is not real.</li>
+            </ul>
+            <h2>Variables</h2>
+            We just went through a bunch of data types, but how would we actually represent and store them in Luau? The answer is variables.<br>
+            <br>
+            You might have heard about variables in your elementary school math classes: If 4x + 3 = 13, then find the value of x. Variables in programming are somewhat
+            similar; they have a name, and they represent a certain value.<br>
+            <br>
+            The basic format for declaring a variable in Luau is: <code>name = value</code>. Let's try out some examples in the ROBLOX Studio command line:<br>
+            <img src="x_is_5.PNG" width="300" height="auto"><br>
+            Here, we've created a variable named "x", and assigned it the value of 5 (an integer!).
+
+            <h3 class="quickexercise">Quick Exercise: Try storing other types of data in x, like 6.7, "Hello", and <em>true</em>.</h3>
+
+            Note that there are a few constraints on what you can name a variable; you can only use letters, underscores, and numbers, but it must not
+            start with a number.
+
+            <h3 class="quickexercise">Quick Exercise: Which of the following are valid variable names?</h3>
+            <ul>
+                <li>Hi</li>
+                <li>y</li>
+                <li>_he11o</li>
+                <li>45num</li>
+                <li>my var</li>
+                <li>my_var</li>
+            </ul>
+
+            The cool thing about variables is that we can now reference them just by using their name:<br>
+            <img src="print_x.PNG" width="200" height="auto"><br>
+            Since we previously stored the integer 5 in our variable named x, doing <code>print(x)</code> basically does <code>print(5)</code>.
             
+            <h3 class="quickexercise">Quick Exercise: Create a variable, store a string inside it, and then print the variable.</h3>
+
+            We can also do math using variables:<br>
+            <img src="var_math.PNG" width="300" height="auto"><br>
+            In the code above, we defined y to be 7, and x to be 2. So doing y + x was the same thing as doing 7 + 2, which is 9.<br>
             <div id="exercises">
                 <h2>Exercises:</h2>
                 <ol>
-                    
+                    <li>Classify the following values: true, 1, "false", "one", 5 + 7, (5 + 7) / 89, '5'</li>
+                    <li>Define the variables x to be "Hello", and y to be "Bye". Store their concatenation in a variable named z. What is the type of z?</li>
+                    <li>Let x = 5, and let y = 9. Let z = x + y. Consider the statement "z is equal to 15." Is this true or false?</li>
+                    <li>You can use concatenation with variables: if we let s = "Bob", then <code>print("Hello "..s)</code> prints out "Hello Bob". Store your name in a variable, and use concatenation
+                    to print out your own greeting.</li> 
+                    <li>Let b = "true". Consider the following statement: "The variable b is a boolean." What Boolean value does it have?</li>
+                    <li>Try the following in the command line: define x to be 5, and y to be x. Then change x to be 8. What happens if you print out y? Can you explain why?</li>
                 </ol>
             </div>
         </p>

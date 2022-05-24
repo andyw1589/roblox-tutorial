@@ -1,107 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <title>Chapter 2</title>
-
-        <style>
-            body {
-                background-color: lightblue;
-                font-family: "Helvetica";
-            }
-            h1 {
-                color: darkred;
-            }
-            .quickexercise {
-                color: darkblue;
-            }
-            #exercises {
-                font-weight: 700;
-                color: rgb(127, 40, 156);
-            }
-
-        </style>
     </head>
     <body>
-        <h1>Chapter 2: Data and Variables</h1>
-        <p>
-            This chapter will introduce the basic types of data there are, and how to represent them in Lua and Luau.<br>
+        <heading>
+            <h1 class="bg-primary text-white text-center rounded border border-primary border-5 pb-2">Chapter 2: Data and Variables</h1>
+            <h3 class="text-center border-bottom border-3 px-5 pb-2">This chapter will introduce the basic types of data there are, 
+                and how to represent them in code.</h3>
+        </heading>
 
-            The basic types of data are numbers, characters, strings, and Booleans.<br>
-
-            <h2>Numbers</h2>
-            Numbers can be divided into two types: integers and floats. Integers are basically the "whole numbers" that you've learned
+        <section class="w-75 mx-auto">
+            <h1>Numbers</h1>
+            <p>Numbers can be divided into two types: integers and floats. Integers are basically the "whole numbers" that you've learned
             in elementary school: -2, -1, 0, 1, 2, 56, 79, and so on. A float is essentially a decimal number: 5.0, 6.79, 4.20, and so on.
             Floats themselves are much more complicated than that, so watch <a href="https://www.youtube.com/watch?v=9hdFG2GcNuA" target="_blank">this video</a>
-            if you want to learn more about them.
-            
-            <h3 class="quickexercise">Quick Exercise: Print out each of the numbers listed above.</h3>
+            if you want to learn more about them.</p>
 
-            <h2>Characters and Strings</h2>
-            A character is a single letter, like 'A', 'B', 'c', 'd', '$', '?', and anything else you can type. A string is a bunch of characters strung together,
+            <div class="alert alert-secondary">
+                <b>Quick Exercise: Print out each of the numbers listed above.</b>
+            </div>
+        </section>
+
+        <br>
+
+        <section class="w-75 mx-auto">
+            <h1>Characters and Strings</h1>
+            <p> A character is a single letter, like 'A', 'B', 'c', 'd', '$', '?', and anything else you can type. A string is a bunch of characters strung together,
             hence the name "string." In other words, strings are entire words or sentences, or any other collection of characters. Some examples
-            of strings are: "Hello, World!", "jhfsdjkf9832", and "Bruh."
+            of strings are: "Hello, World!", "jhfsdjkf9832", and "Bruh."</p>
+            
+            <div class="alert alert-secondary">
+                <b>Quick Exercise: Classify the following values: 1, '1', "One"</b>
+            </div>
+        </section>
 
-            <h3 class="quickexercise">Quick Exercise: Classify the following values: 1, '1', "One"</h3>
+        <br>
 
-            <h2>Booleans</h2>
-            Booleans might sound weird if you've never heard them before, but they're basically just <em>true</em> or <em>false</em> (note: they are NOT the literal strings "true" and "false").
-            For example, the statement "1 + 1 = 2" is a <em>true</em> statement, but "1 + 2 = 6" is <em>false</em>. These are Booleans (fun fact: they are named after
-            <a href="https://en.wikipedia.org/wiki/George_Boole" target="_blank">George Boole.</a>).
+        <section class="w-75 mx-auto">
+            <h1>Booleans</h1>
+            <p> Booleans might sound weird if you've never heard them before, but they're basically just <em>true</em> or <em>false</em> (note: they are NOT the literal strings "true" and "false").
+                For example, the statement "1 + 1 = 2" is a <em>true</em> statement, but "1 + 2 = 6" is <em>false</em>. These are Booleans (fun fact: they are named after
+                <a href="https://en.wikipedia.org/wiki/George_Boole" target="_blank">George Boole.</a>)</p>
+            
+            <div class="alert alert-secondary">
+                <b>Quick Exercise: Classify the following values statements as either true or false:</b>
+                <ul>
+                    <li>The Earth is in space.</li>
+                    <li>2 + 2 = 5</li>
+                    <li>Luau is used to program ROBLOX games.</li>
+                    <li>The Olympics are held every four years.</li>
+                    <li>The moon is not real.</li>
+                </ul>
+            </div>
+        </section>
 
-            <h3 class="quickexercise">Quick Exercise: Classify the following values statements as either true or false:</h3>
-            <ul>
-                <li>The Earth is in space.</li>
-                <li>2 + 2 = 5</li>
-                <li>Luau is used to program ROBLOX games.</li>
-                <li>The Olympics are held every four years.</li>
-                <li>The moon is not real.</li>
-            </ul>
-            <h2>Variables</h2>
-            We just went through a bunch of data types, but how would we actually represent and store them in Luau? The answer is variables.<br>
+        <br>
+
+        <section class="w-75 mx-auto">
+            <h1>Variables</h1>
+            <p>We just went through a bunch of data types, but how would we actually represent and store them in Luau? The answer is variables.<br>
             <br>
             You might have heard about variables in your elementary school math classes: If 4x + 3 = 13, then find the value of x. Variables in programming are somewhat
             similar; they have a name, and they represent a certain value.<br>
             <br>
-            The basic format for declaring a variable in Luau is: <code>name = value</code>. Let's try out some examples in the ROBLOX Studio command line:<br>
-            <img src="x_is_5.PNG" width="300" height="auto"><br>
-            Here, we've created a variable named "x", and assigned it the value of 5 (an integer!).
+            The basic format for declaring a variable in Luau is: <code>name = value</code>. Let's try out an example in the ROBLOX Studio command line:</p>
 
-            <h3 class="quickexercise">Quick Exercise: Try storing other types of data in x, like 6.7, "Hello", and <em>true</em>.</h3>
+            <img class="rounded mx-auto d-block" src="x_is_5.PNG" width="300" height="auto">
 
-            Note that there are a few constraints on what you can name a variable; you can only use letters, underscores, and numbers, but it must not
-            start with a number.
-
-            <h3 class="quickexercise">Quick Exercise: Which of the following are valid variable names?</h3>
-            <ul>
-                <li>Hi</li>
-                <li>y</li>
-                <li>_he11o</li>
-                <li>45num</li>
-                <li>my var</li>
-                <li>my_var</li>
-            </ul>
-
-            The cool thing about variables is that we can now reference them just by using their name:<br>
-            <img src="print_x.PNG" width="200" height="auto"><br>
-            Since we previously stored the integer 5 in our variable named x, doing <code>print(x)</code> basically does <code>print(5)</code>.
+            <p>Here, we've created a variable named <code>x</code>, and assigned it the value of 5 (an integer!).</p>
             
-            <h3 class="quickexercise">Quick Exercise: Create a variable, store a string inside it, and then print the variable.</h3>
-
-            We can also do math using variables:<br>
-            <img src="var_math.PNG" width="300" height="auto"><br>
-            In the code above, we defined y to be 7, and x to be 2. So doing y + x was the same thing as doing 7 + 2, which is 9.<br>
-            <div id="exercises">
-                <h2>Exercises:</h2>
-                <ol>
-                    <li>Classify the following values: true, 1, "false", "one", 5 + 7, (5 + 7) / 89, '5'</li>
-                    <li>Define the variables x to be "Hello", and y to be "Bye". Store their concatenation in a variable named z. What is the type of z?</li>
-                    <li>Let x = 5, and let y = 9. Let z = x + y. Consider the statement "z is equal to 15." Is this true or false?</li>
-                    <li>You can use concatenation with variables: if we let s = "Bob", then <code>print("Hello "..s)</code> prints out "Hello Bob". Store your name in a variable, and use concatenation
-                    to print out your own greeting.</li> 
-                    <li>Let b = "true". Consider the following statement: "The variable b is a boolean." What Boolean value does it have?</li>
-                    <li>Try the following in the command line: define x to be 5, and y to be x. Then change x to be 8. What happens if you print out y? Can you explain why?</li>
-                </ol>
+            <div class="alert alert-secondary">
+                <b>Quick Exercise: Try storing other types of data in x, like 6.7, "Hello", and <i>true</i></b>
             </div>
-        </p>
+
+            <p>Note that there are a few constraints on what you can name a variable; you can only use letters, underscores, and numbers, but it must not
+            start with a number.</p>
+
+            <div class="alert alert-secondary">
+                <b>Quick Exercise: Which of the following are valid variable names?</b>
+                <ul>
+                    <li><code>Hi</code></li>
+                    <li><code>y</code></li>
+                    <li><code>_he11o</code></li>
+                    <li><code>45num</code></li>
+                    <li><code>my var</code></li>
+                    <li><code>my_var</code></li>
+                </ul>
+            </div>
+
+            <p>Once you have a variable, you can now reference it using its name:</p>
+
+            <img class="rounded mx-auto d-block" src="print_x.PNG" width="200" height="auto">
+
+            <p>Since we stored the integer 5 in our variable named <code>x</code>, doing <code>print(x)</code> basically does the same thing as <code>print(5)</code>.</p>
+        
+            <div class="alert alert-secondary">
+                <b>Quick Exercise: Create a variable, store a string inside it, and then print the variable.</b>
+            </div>
+
+            <p>We can also do math using variables:</p>
+
+            <img class="rounded mx-auto d-block" src="var_math.PNG" width="300" height="auto">
+
+            <p>In the code above, we defined <code>y</code> to be 7, and <code>x</code> to be 2. So doing <code>y + x</code> is the same thing as doing <code>7 + 2</code>, which is 9.</p>
+        </section>
+
+        <br>
+
+        <section id="exercises" class="w-75 mx-auto">
+            <h1>Exercises:</h1>
+            <ol>
+                <li>Classify the following values: <code>true, 1, "false", "one", 5 + 7, (5 + 7) / 89, '5'</code></li>
+                <li>Let <code>x = "Hello"</code> and <code>y = "Bye"</code>. Let <code>z = x..y</code> (concatenation can be used with variables!). What is the type of <code>z</code>?</li>
+                <li>Let <code>x = 5</code>, and <code>y = 9</code>. Let <code>z = x + y</code>. Consider the statement "z is equal to 15." Is this true or false?</li>
+                <li>Let <code>b = "true"</code>. Consider the following statement: "The variable b is a boolean." What Boolean value does this statement have?</li>
+                <li>Try the following in the command line: let <code>x = 5</code>, and <code>y = x</code>. Then change <code>x</code> to be 8. What happens if you print out <code>y</code>?</li>
+            </ol>
+        </section>
     </body>
 </html>

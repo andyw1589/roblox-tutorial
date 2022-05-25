@@ -60,15 +60,36 @@
         <br>
 
         <section class="w-75 mx-auto">
+            <h1>Tables</h1>
+            <p>Tables are essentially collections of different kinds of data, sort of like a list. We will get into more detail about this later.</p>
+        </section>
+
+        <br>
+
+        <section class="w-75 mx-auto">
+            <h1>Userdata</h1>
+            <p>Simply put, these are things that have been created by ROBLOX themselves, such as <code>Instance</code> and <code>Vector3</code>. These will be postponed until much later.</p>
+        </section>
+
+        <br>
+
+        <section class="w-75 mx-auto">
+            <h1>Nil</h1>
+            <p>The <code>nil</code> type represents nothingness. We will take a deeper look at this in the next chapter.</p>
+        </section>
+
+        <br>
+
+        <section class="w-75 mx-auto">
             <h1>Variables</h1>
             <p>We just went through a bunch of data types, but how would we actually represent and store them in Luau? The answer is variables.<br>
             <br>
-            You might have heard about variables in your elementary school math classes: If 4x + 3 = 13, then find the value of x. Variables in programming are somewhat
+            You might have heard about variables in your elementary school math classes: if 4x + 3 = 13, then find the value of x. Variables in programming are somewhat
             similar; they have a name, and they represent a certain value.<br>
             <br>
-            The basic format for declaring a variable in Luau is: <code>name = value</code>. Let's try out an example in the ROBLOX Studio command line:</p>
+            The basic format for declaring a variable in the command line is: <code>name = value</code>. Let's try out an example in the ROBLOX Studio command line:</p>
 
-            <img class="rounded mx-auto d-block" src="x_is_5.PNG" width="300" height="auto">
+            <img class="rounded mx-auto d-block" src="images/x_is_5.PNG" width="300" height="auto">
 
             <p>Here, we've created a variable named <code>x</code>, and assigned it the value of 5 (an integer!).</p>
             
@@ -80,20 +101,20 @@
             start with a number.</p>
 
             <div class="alert alert-secondary">
-                <b>Quick Exercise: Which of the following are valid variable names?</b>
+                <b>Quick Exercise: Which of the following are valid variable names? Click on them to verify.</b>
                 <ul>
-                    <li><code>Hi</code></li>
-                    <li><code>y</code></li>
-                    <li><code>_he11o</code></li>
-                    <li><code>45num</code></li>
-                    <li><code>my var</code></li>
-                    <li><code>my_var</code></li>
+                    <li class="pb-1"><button class="btn btn-light right-answer">Hi</button></li>
+                    <li class="pb-1"><button class="btn btn-light right-answer">y</button></li>
+                    <li class="pb-1"><button class="btn btn-light right-answer">_he11o</button></li>
+                    <li class="pb-1"><button class="btn btn-light wrong-answer">45num</button></li>
+                    <li class="pb-1"><button class="btn btn-light wrong-answer">my var</button></li>
+                    <li class="pb-1"><button class="btn btn-light right-answer">my_var</button></li>
                 </ul>
             </div>
 
             <p>Once you have a variable, you can now reference it using its name:</p>
 
-            <img class="rounded mx-auto d-block" src="print_x.PNG" width="200" height="auto">
+            <img class="rounded mx-auto d-block" src="images/print_x.PNG" width="200" height="auto">
 
             <p>Since we stored the integer 5 in our variable named <code>x</code>, doing <code>print(x)</code> basically does the same thing as <code>print(5)</code>.</p>
         
@@ -103,14 +124,14 @@
 
             <p>We can also do math using variables:</p>
 
-            <img class="rounded mx-auto d-block" src="var_math.PNG" width="300" height="auto">
+            <img class="rounded mx-auto d-block" src="images/var_math.PNG" width="300" height="auto">
 
             <p>In the code above, we defined <code>y</code> to be 7, and <code>x</code> to be 2. So doing <code>y + x</code> is the same thing as doing <code>7 + 2</code>, which is 9.</p>
         </section>
 
         <br>
 
-        <section id="exercises" class="w-75 mx-auto">
+        <section class="w-75 mx-auto">
             <h1>Exercises:</h1>
             <ol>
                 <li>Classify the following values: <code>true, 1, "false", "one", 5 + 7, (5 + 7) / 89, '5'</code></li>
@@ -118,7 +139,11 @@
                 <li>Let <code>x = 5</code>, and <code>y = 9</code>. Let <code>z = x + y</code>. Consider the statement "z is equal to 15." Is this true or false?</li>
                 <li>Let <code>b = "true"</code>. Consider the following statement: "The variable b is a boolean." What Boolean value does this statement have?</li>
                 <li>Try the following in the command line: let <code>x = 5</code>, and <code>y = x</code>. Then change <code>x</code> to be 8. What happens if you print out <code>y</code>?</li>
+                <li>We can use the <code>typeof</code> function to get the type of a variable. Let <code>myVar = "5"</code>.
+                    Then type <code>print(typeof(myVar))</code> in the command line. What gets printed out? Use this to check your answers to the previous problems.</li> 
             </ol>
         </section>
+
+        <script src="../../js/answer-buttons.js"></script>
     </body>
 </html>
